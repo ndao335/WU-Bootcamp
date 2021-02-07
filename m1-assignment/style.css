@@ -1,0 +1,356 @@
+/* Header */
+body{
+    background-size: cover;
+    background-color: #EFE9E7;
+}
+header{
+    width: 100%;
+    min-height: 200px;
+    padding-top: 3em;
+}
+header{
+    background: no-repeat lightblue url(images/mythology.jpg);
+    background-size: 1500px;
+}
+.main-header{
+    background-color: #FFEE32;
+    width: 583px;
+    margin: 2em auto 0 100px;
+    min-height: 100px;
+    height: 100px;
+}
+.main-header .logo img{
+    width: 100px;
+    height: 100px;
+    margin: 0 0 0 0;
+    float: left;
+}
+
+/* Navigation */
+.main-menu{
+    font-weight: 400;
+}
+.main-menu ul li{
+    list-style-type: none;
+    display: inline-block;
+    float: left;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-left: 1px solid rgba(202, 204, 202, 0.6);
+    line-height: 100px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #DAE0F2
+}
+fieldset{
+    border-color: #202020;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main-menu ul li a{
+    text-decoration: none;
+    color: #202020;
+}
+.main-menu ul li a:hover{
+    color: #111344;
+}
+.main-menu ul li.active{
+    background: #EFE9E7;
+    border: none;
+}
+.main-menu ul li.active a{
+    color: black;
+}
+
+/* Main */
+main{
+    line-height: 30px;
+    margin: 4em auto 4em auto;
+    padding: 0 100px 10px 100px;
+}
+main #content{
+    width: 200px;
+}
+main #image1{
+    width: 220px;
+    float: right;
+    border: solid;
+    border-color: #202020;
+}
+main #image2{
+    width: 200px;
+    float: right;
+    border: solid;
+    border-color: #202020;
+}
+main #image3{
+    width: 240px;
+    float: right;
+    border: solid;
+    border-color: #202020;
+}
+main h2{
+    color: #111344;
+}
+main h3{
+  color: #52154E;
+}
+
+main p{
+    padding: 0 0 0 10px;
+    color: #3B5998;
+}
+
+/* Table */
+table{
+    width: 1000px;
+    margin: 4em auto 0 auto;
+}
+caption{
+    background: #52154E;
+    height: 100px;
+    color: #DAE0F2;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+thead{
+    text-align: center;
+    background: #EEFFE6;;
+}
+tbody{
+    background: #EEFFE6;
+    text-align: center;
+}
+th, td{
+    width: 225px;
+    height: 75px;
+    vertical-align: middle;
+    border: solid 1px gray;
+}
+td:first-child{
+    font-weight: bold;
+    background: #111344;
+    color: #EFE9E7
+}
+
+/* Footer */
+footer{
+    width: 100%;
+    height: 180px;
+    padding-bottom: 0;
+    background-color: #111344;
+    font-size: 20px;
+    color: #EFE9E7;
+}
+footer #nondisclaimer .copy{
+    padding: 3.5em 3.5em 3.5em 13em;
+    float: left;
+    font-size: 0.9em;
+}
+footer #nondisclaimer .social{
+    padding: 2.5em;
+    margin-right: 9.25em;
+    float: right;
+}
+footer #disclaimer{
+    clear: both;
+}
+footer #disclaimer p{
+    font-size: 0.85em;
+    text-align: center;
+}
+footer #nondisclaimer .social .fa{
+    padding: 15px;
+    font-size: 15px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 4px;
+    border-radius: 50%;
+}
+footer #nondisclaimer .social .fa:hover{
+    opacity: 0.7;
+}
+footer #nondisclaimer .social .fa-facebook{
+    background: #3B5998;
+    color: white;
+}
+footer #nondisclaimer .social .fa-twitter{
+    background: #55acee;
+    color: white;
+}
+footer #nondisclaimer .social .fa-instagram{
+    background: #125688;
+    color: white;
+}
+
+/* References */
+.column {
+    float: left;
+    width: 50%;
+    border: solid;
+}
+
+#fieldRef{
+    color: #3B5998;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Contact */
+form{
+    font-size: 14px;
+    text-align: left;
+    text-transform: none;
+    font-weight: bold;
+}
+form div{
+    margin: 15px 0 0 0;
+    padding-left: 25px;
+}
+form legend{
+    padding-left: 0;
+    font-size: 18px;
+    color: #EFE9E7;
+}
+.textbox label{
+    display: block;
+    margin: 15px 0 0 0;
+}
+select{
+    width: 150px;
+    text-align: center;
+}
+input{
+    width: 500px;
+    font-size: 14px;
+}
+input[type="radio"]{
+    width: 25px;
+}
+textarea{
+    display: block;
+    width: 500px;
+    height: 200px;
+}
+input[type="submit"]{
+    margin: 20px 0 10px 0;
+    width: 100px;
+}
+form .button input[type="submit"]{
+    background-color: #111344;
+    border: none;
+    text-align: center;
+    display: block;
+    margin: 10px 0 10px 400px;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #DAE0F2;
+}
+form .button:active input[type="submit"]{
+    background-color: #EFE9E7;
+    box-shadow: 0 5px #666;
+}
+
+/* Gallery */
+#gallery {
+    position: relative;
+}
+#gallery img{
+    padding-top: 30px;
+}
+#description{
+    transition: .5s ease;
+    opacity: 0;
+    width: 474px;
+    position: absolute;
+}
+.singleImage{
+    display: inline-block;
+    padding: 50px;
+}
+.singleImage img:hover{
+    cursor: zoom-in;
+}
+.singleImage:hover #description{
+    opacity: 0.8;
+    cursor: help;
+}
+#description .text {
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, 500%);
+    background-color: #EFE9E7;
+    color: #202020;
+    font-size: 16px;
+    padding: 16px 32px;
+    text-align: center;
+}
+.caption{
+    font-size: 16px;
+    padding: 16px 32px;
+    background-color: #52154E;
+    text-align: center;
+    width: 410px;
+    color: #EFE9E7;
+}
+#infoBox{
+    visibility: hidden;
+    position: absolute;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 200px;
+    top: 150%;
+    left: 35%;
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    opacity: 0.8;
+    border: 2px solid;
+    border-radius: 25px;
+}
+#infoBox h2, p{
+    color: white;
+}
+#infoBox a{
+    font-weight: bold;
+    color: yellow;
+}
+#infoClose:hover{
+    cursor: pointer;
+}
+/* Light Box */
+.backdrop {
+    z-index: 1;
+    opacity: .0;
+    filter: alpha(opacity=0);
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+.box {
+    z-index: 2;
+    position: fixed;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #444444;
+}
+.close {
+    float: right;
+    cursor: pointer;
+}
