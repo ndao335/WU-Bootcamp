@@ -1,13 +1,7 @@
 $(document).ready(function(){
     
     $("td").mouseover(function(e){
-        var tempCell = $(this).text();
-        if(tempCell == "Not Available" || 
-        tempCell == "Hiking" ||
-        tempCell == "Kayak" ||
-        tempCell == "Skydiving" ||
-        tempCell == "Biking" ||
-        tempCell == "Camping")
+        if($(this).attr("id") == "NotClickable")
             $(this).css("cursor", "default");
         else
             $(this).css("cursor", "pointer");
