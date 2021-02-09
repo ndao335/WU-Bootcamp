@@ -7,9 +7,24 @@ $(document).ready(function(){
             $(this).css("cursor", "pointer");
     });
     
-    $("td").bind("click", function (e){
+    $("td").click(function (){
         var tempCell = $(this).text();
-        if(tempCell != "Not Available")
-            $(e.target).closest("td").toggleClass("highlight");
+        if(tempCell != "Not Available"){
+            $(this).toggleClass("highlight");
+
+            if($(this).hasClass("highlight")){
+                var cellIndex = $(this).index();
+                var cliffIndex = $('.activityTable thead tr th').eq(cellIndex).text();
+                $('#displaySelected').css("visibility", "visible");
+                $('#displaySelected').css("margin-top", "2em");
+                $('#result').append("<p>" + tempCell + "<mark> at " + cliffIndex + "</mark></p>");
+            } else{
+                $('#result p:contains(' + tempCell + ')').remove();
+                if($('#result').has('p').length == false){
+                    $('#displaySelected').css("visibility", "hidden");
+                    $('#displaySelected').css("margin-top", "0");
+                }
+            }
+        }
     });
 })
