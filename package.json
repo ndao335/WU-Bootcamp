@@ -1,0 +1,24 @@
+{
+  "name": "westcliff-test",
+  "version": "1.0.0",
+  "description": "Node setup",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndao335/WU-Bootcamp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ndao335/WU-Bootcamp/issues"
+  },
+  "homepage": "https://github.com/ndao335/WU-Bootcamp#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
