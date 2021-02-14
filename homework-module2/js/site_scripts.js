@@ -3,8 +3,8 @@ function partnerLogo(){
     var fileName = [];
     var imageList = [];
     var logo;
-    var openList = "<li class='partner'>"; //Declare a variable to contain open list tag
-    var closeList = "</li>"; //Declare a variable to contain close list tag
+    var openList = "<div class = 'col-lg-2 col-md-4 col-sm-6'><li class='partner'>"; //Declare a variable to contain open list tag
+    var closeList = "</li></div>"; //Declare a variable to contain close list tag
 
     fileName.push("partner-bustour");
     fileName.push("partner-cabinrental");
@@ -20,6 +20,6 @@ function partnerLogo(){
         imageList.push(logo);
     }
 
-    document.getElementById("partners").innerHTML = imageList;
+    document.getElementById("partners").innerHTML = "<div class = 'row'>" + imageList.join("") + "</div>";
 }
 partnerLogo();

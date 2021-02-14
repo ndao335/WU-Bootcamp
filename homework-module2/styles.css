@@ -21,15 +21,15 @@ header{
     background-size: 1500px;
 }
 .main-header{
-    width: 700px;
-    height: 100px;
-    min-height: 100px;
+    width: 750px;
+    height: 124px;
     margin: 2em auto 0 auto;
     background-color: rgb(255, 255, 255, 0.8);
+    max-width: 90%;
 }
 .main-header .logo img{
     width: 100px;
-    height: 100px;
+    height: 110px;
     margin: 0 2em 0 0;
     float: left;
 }
@@ -72,6 +72,7 @@ main{
 }
 main h1{
     color: #9ed034;
+    text-align: center;
 }
 
 /* Partners */
@@ -84,6 +85,7 @@ section #partners{
     padding: 2em 0 2em 0;
     margin: 0 auto;
     text-align: center;
+    max-width: 90%;
 }
 section #partners .partner{
     margin: 0 0.75em;
