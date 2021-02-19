@@ -44,20 +44,29 @@
       <main>
             <h1 class="text-center">Contacting Us<span class="badge badge-info">Info</span></h1>
             <p>If you need more information about the Cliffs, Hours of Operations, Facilicies or questions about this site, please contact us by using one of the following:</p>
-            <form>
+            <form class="needs-validation" novalidate>
               <div class="form-group">
                 <label for="inputName">Enter your full name<span class="badge badge-primary">Required</span></label>
                 <input type="text" class="form-control" id="inputName" placeholder="John Smith" style="width: 500px;" required>
+                <div class="invalid-feedback">
+                  Please enter your name.
+                </div>
               </div>
               <div class="form-group">
                 <label for="inputEmail">Enter your email<span class="badge badge-primary">Required</span></label>
                 <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" style="width: 500px;" placeholder="johnsmith@example.com" required>
                 <small id="emailHelp" class="form-text text-muted">We'll never share your information with anyone else.</small>
+                <div class="invalid-feedback">
+                  Please enter your email.
+                </div>
               </div>
               <div class="form-group">
                 <label for="inputPhone">Enter your phone<span class="badge badge-primary">Required</span></label>
                 <input type="text" class="form-control" id="inputPhone" aria-describedby="phoneHelp" style="width: 500px;" placeholder="xxx-xxx-xxxx" required>
                 <small id="phoneHelp" class="form-text text-muted">We'll never share your information with anyone else.</small>
+                <div class="invalid-feedback">
+                  Please enter your phone number.
+                </div>
               </div>
               <fieldset class="form-group">
                 <div class="row">
@@ -82,12 +91,15 @@
                 <div class="col-auto my-1">
                   <label class="mr-sm-2" for="inlineFormCustomSelect">Which Cliff are you inquiring?<span class="badge badge-warning">Choose</span></label>
                   <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
-                    <option selected>Choose...</option>
+                    <option selected disabled value="">Choose...</option>
                     <option value="1">West Cliff</option>
                     <option value="2">East Cliff</option>
                     <option value="3">South Cliff</option>
                     <option value="4">North Cliff</option>
                   </select>
+                  <div class="invalid-feedback">
+                    Please select a valid cliff.
+                  </div>
                 </div>
               </div>
               <div class="form-group">
