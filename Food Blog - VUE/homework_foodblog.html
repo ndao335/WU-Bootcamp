@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Food Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <body>
+        <aside id="leftside"></aside>
+        <aside id="rightside"></aside>
+        <div id="container">
+            <div id = "component1">
+                <mycomponent1></mycomponent1>
+            </div>
+
+            <main>
+                <nav id="navbar" v-bind:class="active" v-on:click.prevent>
+                    <a href="#" class="home" v-on:click="makeActive('home')">Home</a>
+                    <a href="#" class="recipes" v-on:click="makeActive('receipts')">Recipes</a>
+                    <a href="#" class="lifestyles" v-on:click="makeActive('lifestyles')">Lifestyles</a>
+                    <a href="#" class="videos" v-on:click="makeActive('videos')">Videos</a>
+                    <a href="#" class="about" v-on:click="makeActive('about')">About</a>
+                </nav>
+            
+                <aside id="photos">
+                    <img v-bind:src="image" v-bind:alt="alt" width="180">
+                </aside>
+                <div id = "component2">
+                    <mycomponent2></mycomponent2>
+                </div>
+                
+                
+                <section id="blogposts">
+                    <div class="post">
+                        <img id="img1" v-bind:style = "styleobj" v-bind:src = "obj1.imgsource" v-on:click="showDescription">
+                        <span class="author">{{obj1.author}}</span> — 
+                        <span class="date">{{obj1.date}}</span>
+                        <span class="reply">{{obj1.reply}}</span>
+                        <p>{{obj1.htmlcontent}}</p>
+                    </div>
+
+                    <div class="post">
+                        <img id="img2" v-bind:style = "styleobj" v-bind:src = "obj2.imgsource" v-on:click="showDescription">
+                        <span class="author">{{obj2.author}}</span> — 
+                        <span class="date">{{obj2.date}}</span>
+                        <span class="reply">{{obj2.reply}}</span>
+                        <p>{{obj2.htmlcontent}}</p>
+                    </div>
+
+                    <div class="post">
+                        <img id="img3" v-bind:style = "styleobj" v-bind:src = "obj3.imgsource" v-on:click="showDescription">
+                        <span class="author">{{obj3.author}}</span> — 
+                        <span class="date">{{obj3.date}}</span>
+                        <span class="reply">{{obj3.reply}}</span>
+                        <p>{{obj3.htmlcontent}}</p>
+                    </div>
+
+                    <div class="post">
+                        <img id="img4" v-bind:style = "styleobj" v-bind:src = "obj4.imgsource" v-on:click="showDescription">
+                        <span class="author">{{obj4.author}}</span> — 
+                        <span class="date">{{obj4.date}}</span>
+                        <span class="reply">{{obj4.reply}}</span>
+                        <p>{{obj4.htmlcontent}}</p>
+                    </div>
+                    <div id="displayDescription" v-bind:style = "displayStyle">
+                        <h1 id="title"></h1>
+                        <p id="foodieLevel"></p>
+                        <p id="biography"></p>
+                        <button v-on:click = "closeModal">Close</button>
+                    </div>
+                </section>
+
+            </main>
+
+            <footer>
+                &copy; Copyright FOOD BLOG
+            </footer>
+            
+        </div>
+
+        <script src="vue.js"></script>
+
+    </body>
+</html>
