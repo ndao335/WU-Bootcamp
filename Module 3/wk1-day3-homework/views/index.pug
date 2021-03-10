@@ -1,0 +1,40 @@
+doctype html
+html
+    include head.pug
+    body
+        aside#leftside
+        aside#rightside
+        #container
+            header
+                headcomp
+            main
+                aside#photos
+                    img(src='images/chili.jpg' alt='White Chicken Chili' width='180')
+                h2
+                    blogtitle
+
+                section#blogposts
+                    ul
+                        li#posts(v-for='post in posts')
+                            span.profile
+                                img(:src='post.profilepic' @click='authorinfo(posts, post)')
+                            span.author {{ post.name }} - 
+                            span.date {{ post.date }}
+                            span.reply {{ post.reply }}
+                            p {{ post.message }}
+
+                        #info_box(v-for="post in posts" v-if="post.thisBox")
+                            p.closeBtn.closeBtnP(@click="$emit('close', post.thisBox = false)") &#10006;
+                            #info_title {{ post.name }}
+                            #info_foodie
+                                span Foodie Level: {{ post.foodielevel }}
+                            #info_bio
+                                span Bio: 
+                                br 
+                                .
+                                    {{ post.bio }}
+                            button.closeBtn.closeBtnB(@click="$emit('close', post.thisBox = false)") Close
+                            p#close_info
+            include foot.pug
+        // Vue JS
+        script(src='javascripts/vue.js')
