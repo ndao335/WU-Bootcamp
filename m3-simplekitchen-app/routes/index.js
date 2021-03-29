@@ -31,13 +31,20 @@ router.post('/', [
         .isLength({ min: 1})
         .withMessage('Please enter a name'),
     check('email')
+        .isEmail()
         .isLength({ min: 1})
         .withMessage('Please enter an email'),
     ],
     function(req, res) {
         const errors = validationResult(req);
         if(errors.isEmpty()){
-            res.render('thankyou', { title: 'Thankyou form'});
+            const registration = new Registration(req.body);
+            registration.save()
+            .then(() => res.render('thankyou', { title: 'Thankyou form'}))
+            .catch((err) => {
+                console.log(err);
+                res.send('Sorry! Something went wrong.');
+        });
         } 
         else{
             res.render('register', {
