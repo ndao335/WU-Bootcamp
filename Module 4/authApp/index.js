@@ -9,7 +9,11 @@ const bodyParser = require('body-parser'); //help parse the body of requests
 const expressSession = require('express-session')({ //use express-session to save the session cookie
     secret: 'secret',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    cookie: {
+        secure: false,  //false to test, in reality, set to true
+        maxAge: 60000   //60 seconds
+    }
 });
 
 app.use(bodyParser.json());
