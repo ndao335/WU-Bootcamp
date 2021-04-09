@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Home</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <div class="message-box">
+            <h1 id="welcome-message"></h1>
+            <div><a href="/private">Proceed to Admin</a></div>
+            <div><a href="/logout">Log Out</a></div>
+        </div>
+
+        <script>
+            const req = new XMLHttpRequest();   //instantiate the request object using new XMLHttpRequest()
+            req.onreadystatechange = function(){    //set the onreadystatechange property with the function that will be called after getting the answer. 
+            //In the callback, checking if got a successful response and if so, parse the response, get the user object, and  find the welcome-message element to set its innerText to  user.username
+                if(req.readyState == 4 && req.status == 200){
+                    const user = JSON.parse(req.response).user;
+                    document.getElementById("welcome-message").innerText = `Welcome ${user.username}!`;
+                }
+            };
+            req.open("GET", "http://localhost:3000/user", true); // GET request to the user URL and set the last parameter to true to make it asynchronous.
+            req.send();
+        </script>
+    </body>
+</html>
