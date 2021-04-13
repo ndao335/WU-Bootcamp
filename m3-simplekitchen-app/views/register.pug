@@ -50,6 +50,24 @@ block content
                         class="form-control"
                         value=data.email
                     )
+
+                    label(for="username") Username:
+                    input(
+                        type="text"
+                        id="username"
+                        name="username"
+                        class="form-control"
+                        value=data.username
+                    )
+
+                    label(for="password") Password:
+                    input(
+                        type="text"
+                        id="password"
+                        name="password"
+                        class="form-control"
+                        value=data.password
+                    )
                     button(type="submit" value="Register") Register
         footer
             | &copy; Copyright 2021
