@@ -1,0 +1,85 @@
+extends layout
+
+block content
+    head
+        link(rel='preconnect' href='https://fonts.gstatic.com')
+        link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap' rel='stylesheet')
+        link(rel='StyleSheet' href='css/styles.css' type='text/css')
+        link(rel='StyleSheet' href='css/nav.css' type='text/css')
+        meta(charset='utf-8')
+    body
+        header
+            nav
+                ul
+                    li
+                        a(href='/') Home
+                    li |
+                    li
+                        a(href='#') Blog
+            a.register-button(href='#') Register
+        main
+            img(src="hi_res_logo.jpg", alt="Logo")
+            h3 Sign Up with Board Game Scheduler for free
+            p Already have an account?
+            a(href="#") Log In
+
+            section#intro-register
+                -data = data || {}
+                if errors
+                    ul
+                        for error in errors
+                            li= error.msg
+
+                form(action="." method="POST" class="form-registration")
+                    label(for="name") Name:
+                    input(
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="form-control"
+                        value=data.name
+                    )
+
+                    label(for="email") Email:
+                    input(
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                        value=data.email
+                    )
+
+                    label(for="username") Username:
+                    input(
+                        type="text"
+                        id="username"
+                        name="username"
+                        class="form-control"
+                        value=data.username
+                    )
+
+                    label(for="password") Password:
+                    input(
+                        type="text"
+                        id="password"
+                        name="password"
+                        class="form-control"
+                        value=data.password
+                    )
+                    button(type="submit" value="Register") Register
+        footer
+            img(src="images/hi_res_logo.jpg", alt="Logo")
+            h3 Join us on
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            nav
+                ul
+                    li
+                        a(href='/') Home
+                    li |
+                    li
+                        a(href='#') About Us
+                    li |
+                    li
+                        a(href='#') Integration
+            | &copy; Copyright 2021 Board Game Scheduler by Nathaniel Dao

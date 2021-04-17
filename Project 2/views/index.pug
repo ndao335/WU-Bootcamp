@@ -1,0 +1,78 @@
+extends layout
+
+block content
+    head
+        link(rel='preconnect' href='https://fonts.gstatic.com')
+        link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap' rel='stylesheet')
+        link(rel='StyleSheet' href='css/styles.css' type='text/css')
+        link(rel='StyleSheet' href='css/nav.css' type='text/css')
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        meta(charset='utf-8')
+    body
+        header
+            nav(style="width: 400px;")
+                ul
+                    img(src="images/hi_res_logo.jpg", alt="Logo" width="20%" style="float: left; padding-right: 10px;")
+                    li
+                        a(href='/') Home
+                    li |
+                    li
+                        a(href='#') About Us
+                    li |
+                    li
+                        a(href='#') Integration
+            a.register-button(href='/register') Sign Up
+            a.register-button(href='/register') Log In
+        main
+            section#intro-text
+                span Board Game Scheduler
+                h3 Board Game Scheduler helps you schedule events without back and forth emails.
+                input(type="text" placeholder = "Enter your email")
+                button.submit-button Sign Up
+                button.btn-primary Sign In
+            section#intro-image
+                img(src='images/free.png' width="535px")
+
+            section#tutorial-text
+                span Watch our tutorial video
+                h3 Learn how to schedule board game event with BGS. Quick and easy.
+            section#tutorial-video
+                video(width="320" height="240" controls)
+                    source(src="tutorial.mp4" type="video/mp4")
+
+            section#description-text
+                span How It Works
+                h3 Search for Board Game
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                section#description-image
+                    img(src='images/free.png')
+                h3 Share Your Link
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                section#description-image
+                    img(src='images/free.png')
+                h3 Schedule done
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                section#description-image
+                    img(src='images/free.png')
+
+            section#feature-text
+                span Feature Everyone Enjoys
+                section#feature-image
+                    img(src='images/free.png')
+                h3 Search for Board Game
+        footer
+            img(src="images/hi_res_logo.jpg", alt="Logo" width="10%" style="float: left; padding-right: 10px;")
+            div(style="float: right;")
+                h3 Join us on
+                a(href="#" class="fa fa-facebook")
+                a(href="#" class="fa fa-twitter")
+            ul
+                li(style="list-style: none; display: inline")
+                    a(href='/') Home
+                li(style="list-style: none; display: inline") |
+                li(style="list-style: none; display: inline")
+                    a(href='#') About Us
+                li(style="list-style: none; display: inline") |
+                li(style="list-style: none; display: inline")
+                    a(href='#') Integration
+            | &copy; Copyright 2021 Board Game Scheduler by Nathaniel Dao

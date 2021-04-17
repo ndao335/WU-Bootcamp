@@ -1,0 +1,60 @@
+extends layout
+
+block content
+    head
+        link(rel='preconnect' href='https://fonts.gstatic.com')
+        link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap' rel='stylesheet')
+        link(rel='StyleSheet' href='css/styles.css' type='text/css')
+        link(rel='StyleSheet' href='css/nav.css' type='text/css')
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        meta(charset='utf-8')
+    body
+        header
+            img(src="images/hi_res_logo.jpg", alt="Logo")
+            nav
+                ul
+                    li
+                        a(href='/') Home
+                    li |
+                    li
+                        a(href='#') About Us
+                    li |
+                    li
+                        a(href='#') Integration
+            img(src="images/profile.png", alt="Profile Image")
+            .dropdown
+                button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    | Account
+                .dropdown-menu(aria-labelledby='dropdownMenuButton')
+                    a.dropdown-item(href='#') Action
+                    a.dropdown-item(href='#') Another action
+                    a.dropdown-item(href='#') Something else here
+
+        main
+            h1 My Account
+            ul.nav.nav-tabs
+                li.nav-item
+                    a.nav-link.active(aria-current='page' href='#') Create Event
+                li.nav-item
+                    a.nav-link.active(aria-current='page' href='#') Events
+                li.nav-item
+                    a.nav-link.active(aria-current='page' href='#') Favorite Games
+            section#intro-text
+                span Extra Contents
+
+        footer
+            img(src="images/hi_res_logo.jpg", alt="Logo")
+            h3 Join us on
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            nav
+                ul
+                    li
+                        a(href='/') Home
+                    li |
+                    li
+                        a(href='#') About Us
+                    li |
+                    li
+                        a(href='#') Integration
+            | &copy; Copyright 2021 Board Game Scheduler by Nathaniel Dao
