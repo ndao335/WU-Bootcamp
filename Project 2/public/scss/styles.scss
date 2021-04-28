@@ -25,26 +25,51 @@ header {
     height: 50px;
     width: 1350px;
     margin: 0.8em auto 1em auto;
+
+    #account-panel {
+        font-family: $fontFamily1;
+        background: $backgroundColor1;
+        float: left;
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
 }
 
 /* Nest Main */
 main {
+    display: inline-block;
     background: $mainColor;
-    width: 1350px;
-    min-height:535px;
+    //width: 1350px;
+    min-height: 3000px;
     padding: 1.5%;
     margin: 0 auto;
 
-    #intro-image {
-      float: left;
-      width: 800px;
+    #register-img {
+        width: 20%;
+        height: 20%;
+    }
 
-      img {
-        width: 535px;
-      }
+    #intro-image {
+        float: left;
+
+        img {
+            width: 675px;
+            height: 535px;
+        }
+    }
+
+    #tutorial-video {
+        float: left;
+        video {
+            width: 675px;
+            height: 535px;
+        }
     }
 
     #intro-register{
+        text-align: center;
         h3{
             text-align: center;
             font-weight: bold;
@@ -74,29 +99,128 @@ main {
     }
 
     #intro-text {
-      width: 550px;
-      height: 407px;
-      float:left;
-      background: $sectionColor;
-      text-align: center;
-      padding-top: 8em;
+        width: 50%;
+        height: 407px;
+        float: left;
+        background: $sectionColor;
+        text-align: center;
+        padding-top: 8em;
+  
+        h3 {
+          font-size: $fontSizeH3;
+          color: $color3;
+        }
+  
+        span {
+          font-family: $fontFamily2;
+          font-size: 2em;
+        }
+    }
 
-      h3 {
-        font-size: $fontSizeH3;
-        color: $color3;
-      }
+    #tutorial-text {
+        width: 50%;
+        height: 407px;
+        float: left;
+        background: $sectionColor;
+        text-align: center;
+        padding-top: 8em;
+  
+        h3 {
+          font-size: $fontSizeH3;
+          color: $color3;
+        }
+  
+        span {
+          font-family: $fontFamily2;
+          font-size: 2em;
+        }
+    }
 
-      span {
-        font-family: $fontFamily2;
-        font-size: 2em;
-      }
+    #description-text {
+        display: inline-block;
+        background: $mainColor;
+        margin: 0 auto;
+
+        h2 {
+            padding: 50px;
+            text-align: center;
+            font-family: $fontFamily1;
+            color: $color4;
+            background: $backgroundColor1;
+        }
+        #description-image {
+            float: left;
+            img {
+                width: 675px;
+                height: 535px;
+            }
+        }
+        #description-tutorial {
+            width: 50%;
+            height: 407px;
+            float: left;
+            background: $sectionColor;
+            text-align: center;
+            padding-top: 8em;
+            h3 {
+                font-family: $fontFamily2;
+                font-size: 2em;
+            }
+        }
+    }
+
+    #feature-text{
+        background: $mainColor;
+        margin: 0 auto;
+        text-align: center;
+
+        p {
+            font-size: 14px;
+            color: $color3;
+        }
+        h2 {
+            padding: 50px;
+            text-align: center;
+            font-family: $fontFamily1;
+            color: $color4;
+            background: $backgroundColor1;
+        }
+        h4 {
+            font-family: $fontFamily2;
+            font-size: 25px;
+        }
+        #feature-image{
+            text-align: center;
+            img {
+                width: 750px;
+                height: 300px;
+            }
+        }
+        #grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: #2196F3;
+            padding: 10px;
+
+            #grid-item {
+                background-color: rgba(255, 255, 255, 0.8);
+                border: 1px solid rgba(0, 0, 0, 0.8);
+                padding: 20px;
+                font-size: 30px;
+                text-align: center;
+            }
+        }
+        
     }
 }
-/*
-body {
-	padding: 40px 10px;
-	background-color: #eee;
-}*/
+#dashboard {
+    background: $mainColor;
+    min-height: 3000px;
+    padding: 1.5%;
+    margin-top: 50px;
+    display: block;
+    width: auto;
+}
 .listing-req {
 	h1 {
 		text-align: center;
@@ -158,6 +282,22 @@ footer {
     margin: 2em auto;
     padding-left: 80px;
     font-size: $fontSizeSmall;
+    position: absolute;
+    color: $color4;
+    img {
+        width: 10%;
+        float: left;
+        padding-right: 10px;
+    }
+    div {
+        float: right;
+    }
+    ul {
+        li {
+            list-style: none;
+            display: inline;
+        }
+    }
 }
 
 button {
@@ -166,13 +306,19 @@ button {
     height: 40px;
     background: $backgroundColor1;
     margin-top: 2em;
+    margin: 10px;
+}
+.login-button{
+    color: $color4;
+    width: 100px;
+    background: $backgroundColor1;
+    margin-top: 40px;
+    float: right;
 }
 .register-button{
     color: $color4;
-    width: 100px;
-    height: 30px;
-    background: $backgroundColor1;
-    margin-top: 1em;
+    background: orange;
+    margin-top: 40px;
     float: right;
 }
 .submit-buttton {
@@ -205,6 +351,12 @@ button {
 /* Twitter */
 .fa-twitter {
     background: #55ACEE;
+    color: white;
+}
+
+/* Instagram */
+.fa-instagram {
+    background: yellow;
     color: white;
 }
 

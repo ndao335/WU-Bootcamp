@@ -10,69 +10,93 @@ block content
         meta(charset='utf-8')
     body
         header
-            nav(style="width: 400px;")
+            nav
                 ul
-                    img(src="images/hi_res_logo.jpg", alt="Logo" width="20%" style="float: left; padding-right: 10px;")
+                    img(src="images/hi_res_logo.jpg", alt="Logo")
                     li
                         a(href='/') Home
                     li |
                     li
-                        a(href='#') About Us
+                        a(href='/about') About Us
                     li |
                     li
-                        a(href='#') Integration
+                        a(href='/integration') Integration
             a.register-button(href='/register') Sign Up
-            a.register-button(href='/register') Log In
+            a.login-button(href='/login') Log In
         main
             section#intro-text
                 span Board Game Scheduler
                 h3 Board Game Scheduler helps you schedule events without back and forth emails.
-                input(type="text" placeholder = "Enter your email")
-                button.submit-button Sign Up
-                button.btn-primary Sign In
+                a(href='/register')
+                    button.submit-button(onclick="saveData()") Sign Up
+                a(href='/login')
+                    button.btn-primary Sign In
             section#intro-image
-                img(src='images/free.png' width="535px")
+                img(src='images/free.png')
 
             section#tutorial-text
                 span Watch our tutorial video
                 h3 Learn how to schedule board game event with BGS. Quick and easy.
             section#tutorial-video
-                video(width="320" height="240" controls)
-                    source(src="tutorial.mp4" type="video/mp4")
+                video(controls)
+                    source(src="images/tutorial.mp4" type="video/mp4")
 
+            
             section#description-text
-                span How It Works
-                h3 Search for Board Game
-                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                h2 How It Works
+                section#description-tutorial
+                    h3 Search for Board Game
+                    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 section#description-image
-                    img(src='images/free.png')
-                h3 Share Your Link
-                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    img(src='images/search.jpg')
+                section#description-tutorial   
+                    h3 Share Your Link
+                    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 section#description-image
-                    img(src='images/free.png')
-                h3 Schedule done
-                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    img(src='images/share.png')
+                section#description-tutorial
+                    h3 Schedule done
+                    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 section#description-image
-                    img(src='images/free.png')
+                    img(src='images/schedule.png')
 
             section#feature-text
-                span Feature Everyone Enjoys
+                h2 Feature Everyone Enjoys
                 section#feature-image
-                    img(src='images/free.png')
-                h3 Search for Board Game
+                    img(src='images/featured.jpg')
+                #grid-container
+                    #grid-item 
+                        h4 Calendar Integrations
+                        p Works with your Google, Outlook, Office 365 or iCloud calendar so you're never double booked
+                    #grid-item 
+                        h4 Control
+                        p Set buffer times between meetings, prevent last minute meetings, create secret event type, and more
+                    #grid-item
+                        h4 Flexible
+                        p Supports 1-on-1, round robin and collective availability
+                    #grid-item 
+                        h4 Time Zone Intelligent
+                        p Seamless timezone detection for your invitess so everyone's on the same page
+                    #grid-item 
+                        h4 Work with your apps
+                        p Automate tasks with Salesforce, GoToMeeting, Zapier and more
+                    #grid-item 
+                        h4 Grows with your team
+                        p Works great for individuals, teams and departments
         footer
-            img(src="images/hi_res_logo.jpg", alt="Logo" width="10%" style="float: left; padding-right: 10px;")
-            div(style="float: right;")
+            img(src="images/hi_res_logo.jpg", alt="Logo")
+            div
                 h3 Join us on
                 a(href="#" class="fa fa-facebook")
                 a(href="#" class="fa fa-twitter")
+                a(href="#" class="fa fa-instagram")
             ul
-                li(style="list-style: none; display: inline")
+                li
                     a(href='/') Home
-                li(style="list-style: none; display: inline") |
-                li(style="list-style: none; display: inline")
-                    a(href='#') About Us
-                li(style="list-style: none; display: inline") |
-                li(style="list-style: none; display: inline")
-                    a(href='#') Integration
+                li |
+                li
+                    a(href='/about') About Us
+                li |
+                li
+                    a(href='/integration') Integration
             | &copy; Copyright 2021 Board Game Scheduler by Nathaniel Dao

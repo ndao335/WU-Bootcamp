@@ -2,141 +2,192 @@
 nav {
   font-size: 1em;
   font-font-weight: bold;
-  float: left;
-}
-
-nav ul {
-  list-style-type: none;
-}
-
-nav ul li {
-  float: left;
-  margin: 0 5px 0 0;
-  color: white;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
+  float: left; }
+  nav ul {
+    list-style-type: none;
+    width: 400px; }
+    nav ul img {
+      width: 20%;
+      float: left;
+      padding: 10px; }
+    nav ul li {
+      float: left;
+      margin: 30px 5px 0 0;
+      color: white; }
+      nav ul li a {
+        text-decoration: none;
+        color: white; }
+        nav ul li a:hover {
+          text-decoration: underline; }
 
 /* Variables */
 html {
   font-size: 1em;
-  width: 100%;
-}
+  width: 100%; }
 
 body {
   font-family: Arial, Helvetica, Sans-Serif;
-  background: #daaa0e;
-}
+  background: #0579b8; }
 
 header {
   height: 50px;
   width: 1350px;
-  margin: 0.8em auto 1em auto;
-}
+  margin: 0.8em auto 1em auto; }
+  header #account-panel {
+    font-family: Arial, Helvetica, Sans-Serif;
+    background: #0579b8;
+    float: left; }
+    header #account-panel img {
+      width: 50px;
+      height: 50px; }
 
 /* Nest Main */
 main {
+  display: inline-block;
   background: white;
-  width: 1350px;
-  min-height: 535px;
+  min-height: 3000px;
   padding: 1.5%;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
+  main #register-img {
+    width: 20%;
+    height: 20%; }
+  main #intro-image {
+    float: left; }
+    main #intro-image img {
+      width: 675px;
+      height: 535px; }
+  main #tutorial-video {
+    float: left; }
+    main #tutorial-video video {
+      width: 675px;
+      height: 535px; }
+  main #intro-register {
+    text-align: center; }
+    main #intro-register h3 {
+      text-align: center;
+      font-weight: bold;
+      font-size: 35px; }
+    main #intro-register label {
+      font-size: 14px; }
+    main #intro-register input {
+      height: 20px; }
+    main #intro-register button, main #intro-register .submit-buttton {
+      color: white;
+      width: 100px;
+      height: 40px;
+      background: #0579b8;
+      margin: 0 auto; }
+  main #intro-thank h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px; }
+  main #intro-text {
+    width: 50%;
+    height: 407px;
+    float: left;
+    background: #d4d5d8;
+    text-align: center;
+    padding-top: 8em; }
+    main #intro-text h3 {
+      font-size: 2em;
+      color: #313130; }
+    main #intro-text span {
+      font-family: "Sacramento", cursive;
+      font-size: 2em; }
+  main #tutorial-text {
+    width: 50%;
+    height: 407px;
+    float: left;
+    background: #d4d5d8;
+    text-align: center;
+    padding-top: 8em; }
+    main #tutorial-text h3 {
+      font-size: 2em;
+      color: #313130; }
+    main #tutorial-text span {
+      font-family: "Sacramento", cursive;
+      font-size: 2em; }
+  main #description-text {
+    display: inline-block;
+    background: white;
+    margin: 0 auto; }
+    main #description-text h2 {
+      padding: 50px;
+      text-align: center;
+      font-family: Arial, Helvetica, Sans-Serif;
+      color: white;
+      background: #0579b8; }
+    main #description-text #description-image {
+      float: left; }
+      main #description-text #description-image img {
+        width: 675px;
+        height: 535px; }
+    main #description-text #description-tutorial {
+      width: 50%;
+      height: 407px;
+      float: left;
+      background: #d4d5d8;
+      text-align: center;
+      padding-top: 8em; }
+      main #description-text #description-tutorial h3 {
+        font-family: "Sacramento", cursive;
+        font-size: 2em; }
+  main #feature-text {
+    background: white;
+    margin: 0 auto;
+    text-align: center; }
+    main #feature-text p {
+      font-size: 14px;
+      color: #313130; }
+    main #feature-text h2 {
+      padding: 50px;
+      text-align: center;
+      font-family: Arial, Helvetica, Sans-Serif;
+      color: white;
+      background: #0579b8; }
+    main #feature-text h4 {
+      font-family: "Sacramento", cursive;
+      font-size: 25px; }
+    main #feature-text #feature-image {
+      text-align: center; }
+      main #feature-text #feature-image img {
+        width: 750px;
+        height: 300px; }
+    main #feature-text #grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: #2196F3;
+      padding: 10px; }
+      main #feature-text #grid-container #grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center; }
 
-main #intro-image {
-  float: left;
-  width: 800px;
-}
+#dashboard {
+  background: white;
+  min-height: 3000px;
+  padding: 1.5%;
+  margin-top: 50px;
+  display: block;
+  width: auto; }
 
-main #intro-image img {
-  width: 535px;
-}
-
-main #intro-register h3 {
-  text-align: center;
-  font-weight: bold;
-  font-size: 35px;
-}
-
-main #intro-register label {
-  font-size: 14px;
-}
-
-main #intro-register input {
-  height: 20px;
-}
-
-main #intro-register button, main #intro-register .submit-buttton {
-  color: white;
-  width: 100px;
-  height: 40px;
-  background: #daaa0e;
-  margin: 0 auto;
-}
-
-main #intro-thank h3 {
-  text-align: center;
-  font-weight: bold;
-  font-size: 35px;
-}
-
-main #intro-text {
-  width: 550px;
-  height: 407px;
-  float: left;
-  background: #d4d5d8;
-  text-align: center;
-  padding-top: 8em;
-}
-
-main #intro-text h3 {
-  font-size: 2em;
-  color: #313130;
-}
-
-main #intro-text span {
-  font-family: "Sacramento", cursive;
-  font-size: 2em;
-}
-
-/*
-body {
-	padding: 40px 10px;
-	background-color: #eee;
-}*/
 .listing-req h1 {
   text-align: center;
-  margin: 0 0 2rem;
-}
+  margin: 0 0 2rem; }
 
 .form-registration {
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.form-registration input {
-  width: 100%;
-  margin: 0px 0 10px;
-}
-
-.form-registration .btn {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 100%;
-          flex: 1 0 100%;
-}
+  flex-wrap: wrap; }
+  .form-registration input {
+    width: 100%;
+    margin: 0px 0 10px; }
+  .form-registration .btn {
+    flex: 1 0 100%; }
 
 .my-errors {
   margin: 0 auto;
@@ -144,70 +195,69 @@ body {
   list-style: none;
   color: #333;
   font-size: 1.2rem;
-  display: table;
-}
-
-.my-errors li {
-  margin: 0 0 1rem;
-}
-
-.my-errors li:before {
-  content: "! Error: ";
-  color: #f00;
-  font-weight: bold;
-}
+  display: table; }
+  .my-errors li {
+    margin: 0 0 1rem; }
+    .my-errors li:before {
+      content: "! Error: ";
+      color: #f00;
+      font-weight: bold; }
 
 .listing-table {
-  width: 100%;
-}
-
-.listing-table th {
-  padding: 10px;
-  border-bottom: 1px solid #666;
-  background: #000;
-  color: #fff;
-}
-
-.listing-table th:first-child {
-  border-right: 1px solid #666;
-}
-
-.listing-table td {
-  padding: 10px;
-  border-bottom: 1px solid #666;
-}
-
-.listing-table td:first-child {
-  border-right: 1px solid #666;
-}
+  width: 100%; }
+  .listing-table th {
+    padding: 10px;
+    border-bottom: 1px solid #666;
+    background: #000;
+    color: #fff; }
+    .listing-table th:first-child {
+      border-right: 1px solid #666; }
+  .listing-table td {
+    padding: 10px;
+    border-bottom: 1px solid #666; }
+    .listing-table td:first-child {
+      border-right: 1px solid #666; }
 
 footer {
   width: 1350px;
   margin: 2em auto;
   padding-left: 80px;
   font-size: 0.85em;
-}
+  position: absolute;
+  color: white; }
+  footer img {
+    width: 10%;
+    float: left;
+    padding-right: 10px; }
+  footer div {
+    float: right; }
+  footer ul li {
+    list-style: none;
+    display: inline; }
 
 button, .submit-buttton {
   color: white;
   width: 100px;
   height: 40px;
-  background: #daaa0e;
+  background: #0579b8;
   margin-top: 2em;
-}
+  margin: 10px; }
+
+.login-button {
+  color: white;
+  width: 100px;
+  background: #0579b8;
+  margin-top: 40px;
+  float: right; }
 
 .register-button {
   color: white;
-  width: 100px;
-  height: 30px;
-  background: #daaa0e;
-  margin-top: 1em;
-  float: right;
-}
+  background: orange;
+  margin-top: 40px;
+  float: right; }
 
 .submit-buttton {
-  border: 1px #313130;
-}
+  border: 1px #313130; }
 
 /* Style all font awesome icons */
 .fa {
@@ -215,24 +265,24 @@ button, .submit-buttton {
   font-size: 30px;
   width: 50px;
   text-align: center;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 /* Add a hover effect if you want */
 .fa:hover {
-  opacity: 0.7;
-}
+  opacity: 0.7; }
 
 /* Set a specific color for each brand */
 /* Facebook */
 .fa-facebook {
   background: #3B5998;
-  color: white;
-}
+  color: white; }
 
 /* Twitter */
 .fa-twitter {
   background: #55ACEE;
-  color: white;
-}
-/*# sourceMappingURL=styles.css.map */
+  color: white; }
+
+/* Instagram */
+.fa-instagram {
+  background: yellow;
+  color: white; }

@@ -23,36 +23,18 @@ block content
                         a(href='#') Integration
         main(style="text-align: center; min-height: 500px")
             img#register-img(src="images/hi_res_logo.jpg", alt="Logo")
-            h3 Sign Up with Board Game Scheduler for free
-            p Already have an account?
-            a(href="/login") Log In
+            h3 Log In
+            p Doesn't have an account
+            a(href="/register") Sign Up for Free
 
             section#intro-register
                 -data = data || {}
                 if errors
-                    ul(style="list-style-type:none;")
+                    ul
                         for error in errors
                             li= error.msg
 
-                form(action="." method="POST" class="form-registration")
-                    label(for="name") Name:
-                    input(
-                        type="text"
-                        id="name"
-                        name="name"
-                        class="form-control"
-                        value=data.name
-                    )
-
-                    label(for="email") Email:
-                    input(
-                        type="email"
-                        id="email"
-                        name="email"
-                        class="form-control"
-                        value=data.email
-                    )
-
+                form(action="/login" method="POST" class="form-registration")
                     label(for="username") Username:
                     input(
                         type="text"
@@ -69,8 +51,10 @@ block content
                         name="password"
                         class="form-control"
                         value=data.password
+                        required
                     )
-                    button(type="submit" value="Register") Register
+                    button(type="submit" value="Register" required) Log In
+                    
         footer
             img(src="images/hi_res_logo.jpg", alt="Logo")
             div

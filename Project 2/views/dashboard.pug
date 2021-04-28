@@ -4,57 +4,42 @@ block content
     head
         link(rel='preconnect' href='https://fonts.gstatic.com')
         link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap' rel='stylesheet')
+        link(rel='StyleSheet' href='css/bootstrap.css' type='text/css')
         link(rel='StyleSheet' href='css/styles.css' type='text/css')
         link(rel='StyleSheet' href='css/nav.css' type='text/css')
+
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
         meta(charset='utf-8')
     body
         header
-            img(src="images/hi_res_logo.jpg", alt="Logo")
-            nav
-                ul
-                    li
-                        a(href='/') Home
-                    li |
-                    li
-                        a(href='#') About Us
-                    li |
-                    li
-                        a(href='#') Integration
-            img(src="images/profile.png", alt="Profile Image")
-            .dropdown
-                button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-                    | Account
-                .dropdown-menu(aria-labelledby='dropdownMenuButton')
-                    a.dropdown-item(href='#') Action
-                    a.dropdown-item(href='#') Another action
-                    a.dropdown-item(href='#') Something else here
-
-        main
+            #account-panel
+                h4 Welcome {{user.username}}
+                img(src="images/profile.png", alt="Profile Image")
+            a.register-button(href='/logout' style="float: right") Sign Out
+        
+        main#dashboard
             h1 My Account
             ul.nav.nav-tabs
                 li.nav-item
-                    a.nav-link.active(aria-current='page' href='#') Create Event
-                li.nav-item
-                    a.nav-link.active(aria-current='page' href='#') Events
-                li.nav-item
-                    a.nav-link.active(aria-current='page' href='#') Favorite Games
-            section#intro-text
-                span Extra Contents
-
+                    a.nav-link.active(aria-current='page' href='#') Active
+                li.nav-item.dropdown
+                    a.nav-link.dropdown-toggle(data-bs-toggle='dropdown' href='#' role='button' aria-expanded='false') Dropdown
+                    ul.dropdown-menu
+                    li
+                        a.dropdown-item(href='#') Action
+                    li
+                        a.dropdown-item(href='#') Another action
+                    li
+                        a.dropdown-item(href='#') Something else here
+                    li
+                        hr.dropdown-divider
+                    li
+                        a.dropdown-item(href='#') Separated link
         footer
             img(src="images/hi_res_logo.jpg", alt="Logo")
-            h3 Join us on
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            nav
-                ul
-                    li
-                        a(href='/') Home
-                    li |
-                    li
-                        a(href='#') About Us
-                    li |
-                    li
-                        a(href='#') Integration
+            div
+                h3 Join us on
+                a(href="#" class="fa fa-facebook")
+                a(href="#" class="fa fa-twitter")
+                a(href="#" class="fa fa-instagram")
             | &copy; Copyright 2021 Board Game Scheduler by Nathaniel Dao
